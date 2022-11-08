@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio dos Números</title>
+</head>
+<body>
+    <h1>Desafios dos números</h1>
+    <div>
+        <img src="./assets/desafio2.png" alt="Slide do Desafio">
+    </div>
+</body>
+<script>
+números = [ 0, 4, 6, 7, 10, 11, 15, 23, 1, 17, 25, 300, 25, 22, 100, 1000]
+console.log(números)
+
+function verificaOrdem(){
+    números.sort((a,b)=>{
+    if (a>b) resultado = "Que pena! Sua matriz não está em ordem crescente. Vamos ordenar."
+    else if (a<b) resultado = "Parabéns! A matriz está em ordem crescente"
+}
+)
+} verificaOrdem()
+console.log(resultado)
+console.log("----------------------")
+function ordenar(){
+    números.sort((a,b)=>{
+    if (a>b) return 1;
+    else if (a<b) return -1;
+    else return 0
+}
+)
+}ordenar()
+console.log(`A nova ordem é: ${números}`)
+</script>
+</html>

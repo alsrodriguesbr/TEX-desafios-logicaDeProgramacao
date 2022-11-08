@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do Herói</title>
+    <link rel="stylesheet" href="./Index.css">
+</head>
+<body>
+    <h1>Desafio do Herói</h1>
+    <h1>&nbsp</h1>
+    <div>
+        <img src="./assets/desafio.png" alt="Slide do Desafio">
+    </div>
+    <div>
+        <form>
+            <button class="btn"><a href="./Desafio_do_Herói_Jogo.html">Recomeçar Jogo</a></button>
+        </form>
+    </div>
+</body>
+<script defer>
+    let balas, dragoes, quantidade, tiros, x
+
+balas = Math.random()*100*2;
+console.log(`O número de balas é: ${parseInt(balas)}`)
+
+dragoes = Math.random()*100;
+console.log(`O número de dragões é: ${parseInt(dragoes)}`)
+
+
+
+console.log("---------------------------")
+
+function taxaDeAcertos(x){
+quantidade = +prompt("Qual percentual de tiros o herói acerta?")
+x = quantidade
+return tiros= (Math.floor(x)/100)*balas
+} taxaDeAcertos()
+console.log(`O número de tiros certos foi: ${parseInt(tiros)}`)
+
+if(parseInt(tiros)<parseInt(dragoes*2)){
+console.log(`Que pena! O herói morre. Ele acertou apenas ${parseInt(tiros)} tiros. 
+O número de tiros necessários era: ${parseInt(dragoes*2)}`);
+}
+else {
+console.log(`Parabéns! O herói sobrevive. O número de tiros certos necessários era: ${parseInt(dragoes*2)}`);
+}
+</script>
+</html>
